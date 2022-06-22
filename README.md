@@ -2,8 +2,7 @@ TorchServe server deployment
 
 ---
 
-`run.sh` file contains the commands to be run one after another
-
+`run.sh` file contains the commands to convert pytorch models into `.mar` format and start the docker with all models in `model-storage`
 `convert.sh` contains the command that converts Pytorch model, the Handler class code, and the tokenizer into a TorchServe artifact `model_name.mar`. The artifact is stored in the `model-store` directory and served by the TorchServe docker.
 
 `config.properties` is the config file for the TorchServe server. The file is used as a parameter by the `docker run` command in `run.sh`
