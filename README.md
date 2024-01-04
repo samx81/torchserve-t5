@@ -5,8 +5,16 @@ This is an adaptation from https://github.com/chiragjn/torchserve-t5-translation
 - The handler code was changed in order to support batching on the server side. However, the batching works only with single-datapoint queries which increases the network load.
 - During the inference tests, the GPU memory was the bottleneck for increasing the performance through larger batch size or increasing the number of processes on the server side (see `config.properties`)
 
+## Quick Start
+Install dependency following 
+
+https://github.com/pytorch/serve/tree/master?tab=readme-ov-file#-quick-start-with-torchserve
+
+then
+`pip install -r requirements.txt`
 
 ---
+## Original repo readme
 
 `run.sh` file contains the commands to convert pytorch models into `.mar` format and start the docker with all models in `model-storage`
 
